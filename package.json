@@ -16,13 +16,5 @@
     "lerna": "^3.14.1",
     "next": "^8.1.0",
     "react-hot-loader": "^4.9.0"
-  },
-  "dependencies": {
-    "apisauce": "^1.0.2",
-    "aws-appsync": "^1.8.0",
-    "aws-appsync-react": "^1.2.8",
-    "graphql": "^14.3.1",
-    "graphql-tag": "^2.10.1",
-    "react-apollo": "^2.5.6"
   }
 }
