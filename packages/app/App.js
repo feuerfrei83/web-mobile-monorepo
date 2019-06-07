@@ -6,7 +6,7 @@
  * @flow
  */
 
-import React, {Component} from 'react';
+import React from 'react';
 import {Platform, StyleSheet, Text, View, FlatList, AppRegistry} from 'react-native';
 import NewsHeadlines from '@tcp/core/lib/core';
 
@@ -40,7 +40,6 @@ export default class AjaxFlatList extends React.Component {
     }
   }
   render = () => {
-    console.dir(this.state.headlines)
     return (
       (this.state.headlines.length) ? 
       (<View style={styles.container}>
