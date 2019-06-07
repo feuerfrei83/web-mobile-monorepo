@@ -7,7 +7,8 @@
  */
 
 import React, {Component} from 'react';
-import {Platform, StyleSheet, Text, View} from 'react-native';
+import {Platform, StyleSheet, Text, View, FlatList, AppRegistry} from 'react-native';
+import NewsHeadlines from '@tcp/core/lib/core';
 
 const instructions = Platform.select({
   ios: 'Press Cmd+R to reload,\n' + 'Cmd+D or shake for dev menu',
@@ -16,24 +17,53 @@ const instructions = Platform.select({
     'Shake or press menu button for dev menu',
 });
 
-type Props = {};
-export default class App extends Component<Props> {
-  render() {
+type Props = {}; 
+
+export default class AjaxFlatList extends React.Component {
+  constructor(props) {
+    super(props);
+    this.state = {
+      headlines: []
+    }
+  }
+  componentDidMount() {
+    this.getHeadlines();
+  }
+  getHeadlines = async () => {
+    const newsApi = new NewsHeadlines;
+    const response = await newsApi.getHeadlines();
+    if (response.data && response.data.articles) {
+      let headlines = response.data.articles;
+      this.setState({
+        headlines: headlines
+      })
+    }
+  }
+  render = () => {
+    console.dir(this.state.headlines)
     return (
-      <View style={styles.container}>
-        <Text style={styles.welcome}>Welcome to React Native!</Text>
-        <Text style={styles.instructions}>To get started, edit App.js</Text>
-        <Text style={styles.instructions}>{instructions}</Text>
-      </View>
-    );
+      (this.state.headlines.length) ? 
+      (<View style={styles.container}>
+        <Text style={styles.welcome}>Headlines of the hour</Text>
+        <FlatList data={this.state.headlines} extraData={this.state}
+          renderItem={({item: article}) => (<Text style={styles.instructions}>{article.title}</Text>) }
+        />
+      </View>)
+      :
+      (<View style={styles.container}>
+        <Text style={styles.welcome}>Headlines of the hour</Text>
+      </View>)
+
+    )
   }
 }
+
+AppRegistry.registerComponent("AjaxFlatList", ()=>AjaxFlatList);
 
 const styles = StyleSheet.create({
   container: {
     flex: 1,
     justifyContent: 'center',
-    alignItems: 'center',
     backgroundColor: '#F5FCFF',
   },
   welcome: {
@@ -42,8 +72,8 @@ const styles = StyleSheet.create({
     margin: 10,
   },
   instructions: {
-    textAlign: 'center',
-    color: '#333333',
+    textAlign: 'left',
+    color: '#000',
     marginBottom: 5,
   },
 });

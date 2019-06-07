@@ -1,5 +1,5 @@
 {
-  "name": "web",
+  "name": "@tcp/web",
   "version": "1.0.0",
   "description": "",
   "main": "index.js",
@@ -12,8 +12,17 @@
   "author": "",
   "license": "ISC",
   "dependencies": {
+    "@babel/runtime": "^7.4.5",
+    "@babel/runtime-corejs2": "^7.4.5",
     "next": "^8.1.0",
     "react": "16.8.3",
     "react-dom": "16.8.3"
+  },
+  "devDependencies": {
+    "@babel/cli": "^7.4.4",
+    "@babel/core": "^7.4.5",
+    "@babel/preset-env": "^7.4.5",
+    "@babel/preset-react": "^7.0.0",
+    "babel-loader": "^8.0.6"
   }
 }

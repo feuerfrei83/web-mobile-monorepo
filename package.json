@@ -12,9 +12,18 @@
     ]
   },
   "devDependencies": {
+    "@babel/cli": "^7.4.4",
+    "@babel/core": "^7.4.5",
+    "@babel/preset-env": "^7.4.5",
+    "@babel/preset-react": "^7.0.0",
     "haul": "^1.0.0-rc.15",
     "lerna": "^3.14.1",
     "next": "^8.1.0",
     "react-hot-loader": "^4.9.0"
+  },
+  "dependencies": {
+    "@babel/runtime": "^7.4.5",
+    "apisauce": "^1.0.2",
+    "next-transpile-modules": "^2.3.1"
   }
 }

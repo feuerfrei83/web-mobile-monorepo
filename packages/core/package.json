@@ -1,0 +1,22 @@
+{
+  "name": "@tcp/core",
+  "version": "1.0.0",
+  "description": "> TODO: description",
+  "author": "Anup Mankar <amankar@sapient.com>",
+  "homepage": "",
+  "license": "ISC",
+  "private": true,
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: run tests from root\" && exit 1"
+  },
+  "devDependencies": {
+    "@babel/cli": "^7.4.4",
+    "@babel/core": "^7.4.5",
+    "@babel/preset-env": "^7.4.5",
+    "@babel/preset-react": "^7.0.0"
+  },
+  "dependencies": {
+    "babel-loader": "^8.0.6"
+  }
+}
