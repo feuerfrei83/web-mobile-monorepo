@@ -9,8 +9,6 @@
 import React from 'react';
 import {Platform, StyleSheet, Text, View, FlatList, AppRegistry} from 'react-native';
 import NewsHeadlines from '@tcp/core/lib/core';
-
-
 import Spinner from "react-native-spinkit";
 
 const instructions = Platform.select({
@@ -21,7 +19,6 @@ const instructions = Platform.select({
 });
 
 type Props = {}; 
-
 
 export default class AjaxFlatList extends React.Component {
   constructor(props) {

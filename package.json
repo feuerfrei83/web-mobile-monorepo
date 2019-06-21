@@ -2,13 +2,12 @@
   "name": "root",
   "private": true,
   "workspaces": {
-    "packages": [
-      "packages/*"
-    ],
+    "packages":["packages/*"],
     "nohoist": [
       "**/haul",
       "**/next",
-      "**/react-native"
+      "**/react-native",
+      "**/react-native-spinkit"
     ]
   },
   "devDependencies": {
