@@ -8,7 +8,6 @@
     "haul:ios": "yarn haul start --platform ios"
   },
   "dependencies": {
-    "@tcp/core": "*",
     "react": "16.8.3",
     "react-dom": "16.8.3",
     "react-hot-loader": "^4.9.0",
