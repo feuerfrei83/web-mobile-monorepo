@@ -1,3 +1,3 @@
 #!/usr/bin/env bash
 
-yarn haul init
+#yarn haul init
