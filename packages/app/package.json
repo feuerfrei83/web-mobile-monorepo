@@ -5,7 +5,8 @@
   "scripts": {
     "start": "node node_modules/react-native/local-cli/cli.js start",
     "test": "jest",
-    "haul:ios": "yarn haul start --platform ios"
+    "haul:ios": "yarn haul start --platform ios",
+    "postinstall": ". ./postinstall.sh"
   },
   "dependencies": {
     "react": "16.8.3",
