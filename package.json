@@ -4,6 +4,8 @@
   "workspaces": {
     "packages":["packages/*"],
     "nohoist": [
+      "**/@babel",
+      "**/haul",
       "**/next",
       "**/react-native",
       "**/react-native-spinkit"
